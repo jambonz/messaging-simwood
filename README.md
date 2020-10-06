@@ -10,17 +10,17 @@ translates an incoming SMS from Simwood into a standard format for application p
 Simwood format looks like this:
 ```
 {
-		"app": "sms_inbound",
-		"id": "9a171a847f32e9b8b1b0e43b33120d2a",
-		"data": {
-			"destination": "15085710838",
-			"length": 8,
-			"message": "Hi there",
-			"originator": "15083084809",
-			"time": "2020-10-06 20:36:05"
-		}
+	"app": "sms_inbound",
+	"id": "9a171a847f3238d8e3b33120d2a",
+	"data": {
+		"destination": "15085710838",
+		"length": 8,
+		"message": "Hi there",
+		"originator": "15083084809",
+		"time": "2020-10-06 20:36:05"
 	}
-	```
+}
+```
 
 standard format is:
 ```
@@ -34,13 +34,6 @@ standard format is:
 	"cc": [],
 	"media": []
 }
-```
-
-### formatProviderResponse(messageSid)
-This function will be called before sending a response to Simwood for an incoming SMS. Simwood requires a 200 OK with a JSON body in response to incoming SMS, e.g.
-
-```
-{"receipt": "7c626e1b-7796-4f77-9848-056900b071c4"}
 ```
 
 ### sendSms(opts, payload)
