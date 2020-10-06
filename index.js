@@ -35,7 +35,9 @@ const sendSms = async(opts, body) => {
     const buf = await post(opts.url, {
       from: body.from,
       to: body.to,
-      message: body.text
+      cc: [],
+      message: body.text,
+      media: []
     });
     return buf;
   } catch (err) {
