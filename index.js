@@ -38,7 +38,7 @@ const sendSms = async(opts, body) => {
     });
     return buf;
   } catch (err) {
-    logger.error({err, url: opts.url}, 'Error sending SMS to peerless');
+    logger.error({err, url: opts.url}, 'Error sending SMS to simwood');
   }
 };
 
