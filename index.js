@@ -5,9 +5,6 @@ const noopLogger = {
   error: console.error
 };
 
-
-const addLeadingPlus = (str) => (str.startsWith('+') ? str : `+${str}`);
-
 const toBase64 = (str) => Buffer.from(str || '', 'utf8').toString('base64');
 
 const fromProviderFormat = (opts, payload) => {
